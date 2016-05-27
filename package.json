@@ -1,6 +1,6 @@
 {
   "name": "gradient-generator",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "UI for generating gradients",
   "main": "index.html",
   "scripts": {
