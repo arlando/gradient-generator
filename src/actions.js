@@ -20,4 +20,4 @@ export const removeColor = (id) => {
         type: 'REMOVE_COLOR',
         id: id
     }
-}
+};

@@ -35,7 +35,6 @@
     "babel-preset-react-hmre": "1.1.1",
     "babel-preset-stage-0": "6.5.0",
     "imports-loader": "0.6.5",
-    "rc-slider": "3.6.2",
     "webpack": "1.13.0",
     "webpack-dev-server": "1.14.1"
   }

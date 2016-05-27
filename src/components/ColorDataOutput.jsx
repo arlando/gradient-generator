@@ -11,7 +11,7 @@ class ColorDataOutput extends Component {
     };
 
     constructor (props) {
-        super(props)
+        super(props);
 
         this.state = {
             hexes: '[]'
@@ -24,7 +24,7 @@ class ColorDataOutput extends Component {
             document.execCommand('copy');
             ReactDOM.findDOMNode(this.refs.hexes).blur();
         } catch (e) {
-            console.log('could not copy your grad use ctrl / cmd + c')
+            console.log('Could not copy your gradient, please use ctrl / cmd + c.')
         }
     }
 
@@ -33,7 +33,7 @@ class ColorDataOutput extends Component {
 
         if (newProps.colors) {
             hexes = newProps.colors.map((color) => {
-                return '#' + color.color.hex
+                return color.color
             });
         }
 
@@ -57,11 +57,19 @@ class ColorDataOutput extends Component {
 
     render() {
 
-        let buttonText = this.props.buttonText || 'Copy HEX';
+        let buttonText = this.props.buttonText || 'Copy HEX as array';
+
         return (
-            <div className="gradient-output half">
-                <textarea ref="hexes" value={this.state.hexes}/>
-                <button onClick={::this.copyGradientToClipboard} readOnly={true}>{buttonText}</button>
+            <div>
+                <p>
+                    {this.props.title}
+                </p>
+                <div>
+                    <textarea ref="hexes" value={this.state.hexes} readOnly/>
+                </div>
+                <div>
+                    <button onClick={::this.copyGradientToClipboard} readOnly={true}>{buttonText}</button>
+                </div>
             </div>
         )
     }

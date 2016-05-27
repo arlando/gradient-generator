@@ -8,11 +8,7 @@ class GradientView extends Component {
         colors: [],
         gradient: []
     };
-
-    constructor (props) {
-        super(props)
-    }
-
+    
     shouldComponentUpdate(newProps) {
         return typeof newProps.gradient !== 'undefined'
     }
@@ -20,7 +16,9 @@ class GradientView extends Component {
     render() {
 
         let bigGradient = this.props.gradient.map((color, i) => {
-            let leStyle = { background: '#' + color.toHex() };
+            let leStyle = {
+                background: '#' + color.toHex()
+            };
             return  <div className="gradient-view-color"
                          key={i}
                          style={leStyle} >&nbsp;</div>
