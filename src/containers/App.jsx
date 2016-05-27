@@ -68,11 +68,7 @@ class App extends Component {
             borderRadius: '50%',
             display: 'inline-block'
         };
-
-        let gradientStyle = {
-
-        }
-
+        
         let selectedColors = this.props.colors.map((color) => {
 
             let _color = color.color;

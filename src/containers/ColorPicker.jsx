@@ -16,7 +16,7 @@ class ColorPicker extends Component {
     constructor (props) {
         super(props);
 
-        this.props.setColor('#' + this.props.hex);
+        this.props.setColor(this.props.hex);
 
         this.state = {
             gradient: []
@@ -25,7 +25,7 @@ class ColorPicker extends Component {
 
     onChangeComplete = (color) => {
 
-        if (typeof this.props.hex !== 'undefined') this.props.setColor('#' + this.props.hex);
+        if (typeof this.props.hex !== 'undefined') this.props.setColor(this.props.hex);
 
         this.props.onChange(color)
     };
